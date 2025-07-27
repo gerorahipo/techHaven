@@ -152,15 +152,18 @@ backend:
 
   - task: "Order Management System"
     implemented: true
-    working: "NA"
+    working: true
     file: "/app/backend/server.py"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
       - working: "NA"
         agent: "main"
         comment: "Système de commandes: création depuis panier, historique utilisateur, statuts commandes, calcul total"
+      - working: true
+        agent: "testing"
+        comment: "✅ TESTED: Order system functioning perfectly. POST /orders creates orders from cart items, calculates total amount correctly, stores shipping address, and clears cart after order creation. Order includes proper product details and quantities. Authentication required and working."
 
   - task: "Review System"
     implemented: true

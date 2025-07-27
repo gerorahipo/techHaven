@@ -167,15 +167,18 @@ backend:
 
   - task: "Sample Data Initialization"
     implemented: true
-    working: "NA"
+    working: true
     file: "/app/backend/server.py"
     stuck_count: 0
     priority: "medium"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
       - working: "NA"
         agent: "main"
         comment: "Endpoint /init-data avec produits réalistes (MacBook, Dell XPS, Gaming laptops), utilisateur admin créé"
+      - working: true
+        agent: "testing"
+        comment: "✅ TESTED: /init-data endpoint works perfectly. Successfully initializes 5 realistic laptop products (MacBook Pro M3, Dell XPS 13, Gaming Laptop X500, Lenovo X1 Carbon, HP Pavilion Gaming) and admin user (admin@techhaven.com). Returns proper success message."
 
 frontend:
   - task: "Authentication Pages (Login/Register)"
